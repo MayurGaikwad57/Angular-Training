@@ -1,0 +1,27 @@
+.hero-section h1{
+    color:rgb(241, 79, 79);
+    font-size:xx-large;
+  }
+  .hero-section h4{
+    color:aqua;
+    font-size:xx-large;
+    
+}
+@media (max-width: 576px) {
+  .carousel-caption h1 {
+      font-size: xx-large; /* Further decrease font size for very small screens */
+  }
+  
+  .carousel-caption h4 {
+      font-size: x-large; /* Further decrease font size for very small screens */
+  }
+}
+@media (max-width: 768px) {
+  .carousel-caption h1 {
+      font-size: xx-large; /* Further decrease font size for very small screens */
+  }
+  
+  .carousel-caption h4 {
+      font-size: x-large; /* Further decrease font size for very small screens */
+  }
+}

@@ -1,0 +1,144 @@
+<nav class="navbar sticky-top navbar-expand-lg bg-body-tertiary " data-bs-theme="dark">
+
+    <div class="container-fluid">
+        <div class="nav-item">
+            <img src="../../assets/logo123.png" height="75" width="125" alt="">
+        </div>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav m-auto mb-2 mb-lg-0">
+                <li class="nav-item" [routerLinkActive]="'active'">
+                    <a class="nav-link active" aria-current="page" routerLink="home" >Home</a>
+                </li>
+                <li class="nav-item" [routerLinkActive]="'active'">
+                    <a class="nav-link active" aria-current="page" routerLink="about"  >About</a>
+                </li>
+
+                <li class="nav-item dropdown" [routerLinkActive]="'active'">
+                    <a class="nav-link dropdown-toggle active" routerLink="services" role="button"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        Services
+                    </a>
+                    <ul class="dropdown-menu p-2 bg-light " style="width:320px;" >
+                        <li><a class="dropdown-item text-wrap text-dark" routerActiveLink="#">Velocious Sourcing and Supplier Collabartion</a></li>
+                        <li><a class="dropdown-item text-wrap text-dark" routerActiveLink="#">Accounts Payable Invoice Automation</a></li>
+                        <li><a class="dropdown-item text-wrap text-dark" routerActiveLink="#">Data Archiving</a></li>
+                        <li><a class="dropdown-item text-wrap text-dark" routerActiveLink="#">Digital Signature</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item" [routerLinkActive]="'active'">
+                    <a class="nav-link active" aria-current="page" routerLink="contact">Contact</a>
+                </li>
+            </ul>
+            <!-- <form class="d-flex" role="search">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            </form> -->
+            <!-- <div class="mx-3">
+            <button class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#loginModal">Login</button>
+            <button class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#signupModal">SignUp</button>
+          </div> -->
+          <div>
+            <button class="btn btn-danger mx-2" data-bs-toggle="modal" data-bs-target="#loginModal">Login</button>
+            <button class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#signupModal">SignUp</button>
+        </div>
+        </div>
+        <!-- <div class="mx-4">
+            <button class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#loginModal">Login</button>
+            <button class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#signupModal">SignUp</button>
+        </div> -->
+    </div>
+</nav>
+
+<!-- Alert -->
+<!-- <div class="alert alert-danger alert-dismissible fade show" role="alert">
+    Thanks for choosing Avaali !! Lookout our new features
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+
+Button trigger modal
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+    Launch demo modal
+</button> -->
+
+<!-- login Modal -->
+ <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">Login</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="mb-3">
+                        <label for="exampleInputEmail1" class="form-label">Email address</label>
+                        <input type="email" class="form-control" id="exampleInputEmail1"
+                            aria-describedby="emailHelp">
+                        <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleInputPassword1" class="form-label">Password</label>
+                        <input type="password" class="form-control" id="exampleInputPassword1">
+                    </div>
+                    <button type="submit" class="btn btn-primary">login</button>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div> 
+
+
+ <!-- Button trigger modal
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#loginModal">
+    Launch demo modal
+</button>  -->
+
+<!-- signup Modal -->
+<div class="modal fade" id="signupModal" tabindex="-1" aria-labelledby="signupModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">SignUp to Create Account</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+
+                <form>
+                    <div class="mb-3">
+                        <label for="exampleInputName1" class="form-label">Name</label>
+                        <input type="text" class="form-control" id="exampleInputName1" aria-describedby="Name">
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleInputEmail1" class="form-label">Email address</label>
+                        <input type="email" class="form-control" id="exampleInputEmail1"
+                            aria-describedby="emailHelp">
+                        <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleInputPassword1" class="form-label">Password</label>
+                        <input type="password" class="form-control" id="exampleInputPassword1">
+                    </div>
+                    <div class="mb-3">
+                        <label for="ConfirmPassword" class="form-label"> Confirm Password</label>
+                        <input type="password" class="form-control" id="ConfirmPassword">
+                    </div>
+
+                    <button type="submit" class="btn btn-primary">Create Account</button>
+                </form>
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>  
+

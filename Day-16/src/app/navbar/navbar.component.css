@@ -1,0 +1,14 @@
+.hero-section h1{
+    color:rgb(241, 79, 79);
+    font-weight:bolder;
+    font-size: 25px;
+  }
+  a{
+    font-size:x-large;
+  }
+  .hero-section h4{
+    color:aqua;
+}
+.d-lg-flex .btn-danger{
+    color: white;
+}

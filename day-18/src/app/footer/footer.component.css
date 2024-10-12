@@ -1,0 +1,25 @@
+.heading h5{
+    font-size: 20px;
+}
+.heading ul li{
+    font-size:medium;
+    /* color:black; */
+}
+.container{
+    background-color: rgb(241, 171, 171);
+}
+.bottom{
+    bottom:0;
+}
+.bottom p{
+    color:red;
+    font-size: x-large;
+}
+@media (max-width:576px) {
+    .bottom p{
+        font-size:20px;
+       padding:10px;
+    }
+}
+
+ 

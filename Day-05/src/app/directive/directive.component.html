@@ -1,0 +1,22 @@
+<div class="center">
+    <div class="row">
+        <!-- Using ngClass directive in angular -->
+       <div [ngClass]="getClass()">
+            Using ngClass Directive to change color
+       </div>
+    </div>
+</div>
+
+<!-- Using ngFor to display Objects inside a list -->
+ <div class="center">
+    <div class="row">
+        <button class="btn btn-primary btn-sm" (click)="onSubmit()">Click Here</button>
+    </div>
+    <div *ngIf="display">
+    <ul *ngFor="let user of Users;trackBy:userDetails">
+      <li>{{user.name|uppercase}} -- {{user.email}} -- {{user.num}}</li>
+    </ul>
+</div>
+ </div>
+
+ 

@@ -1,0 +1,21 @@
+<div class="container">
+  <div class="col-lg-5">
+  <h3>{{Title}}</h3>
+  <div class="form-group">
+    <label for="Name">Name:</label>
+    <input type="text" #name  class="form-control">
+  </div>
+  <div class="form-group">
+   <label for="Mark">Mark:</label>
+   <input type="text" #mark class="form-control">
+  </div>
+  <div>
+    <button class="btn btn-primary" (click)="TransferData(name.value,mark.value)">click Here</button>
+  </div>
+  
+</div>
+<div class="container">
+  <h3>Child Component</h3>
+    <app-child [namedata]="nameinput" [markData]="markinput" (dataupdateevent)="changeName($event)"></app-child>
+  </div>
+</div>

@@ -1,0 +1,155 @@
+/* .example-spacer {
+    flex: 1 1 auto;
+  }
+  .main-body{
+    padding-top:20px;
+    max-width:1248px;
+    margin:0 auto;
+    mat-form-field{
+      width: 100%;
+    }
+}  */
+.example-spacer {
+  flex: 1 1 auto;
+} 
+
+.main-body {
+  padding: 20px;
+  max-width: 1000px;
+  margin: 20px auto;
+}
+
+.filter-container {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 20px;
+}
+.mat-elevation-z8{
+  width: 749px;
+  margin:0px auto;
+}
+/* .filter-wrapper{
+  width:500px;
+  margin:0px auto;
+} */
+
+/* .table-container {
+  overflow-x: auto;
+  background: white;
+  border-radius: 8px;
+  padding: 20px;
+} */
+mat-form-field {
+  width: 100%;
+}
+
+th.mat-header-cell {
+  font-weight: bold;
+  /* padding:10px; */
+  background-color:  #A7E6FF;
+}
+th.mat-cell, th.mat-header-cell {
+  text-align:center;
+  margin:33px;
+  color:rgb(9, 9, 9);
+  
+}
+.mat-header-cell,.mat-cell{
+  color:black;
+  background-color:#ffffea;
+}
+
+button[mat-icon-button] {
+  /* margin: 0 5px; */
+  mat-icon{
+    margin:20px 10px;
+  }
+}
+/* .matContentDef{
+  text-align: center;
+} */
+
+/* ng-container{
+  .matColumnDef{
+     display: flex;
+     justify-content: center;
+     align-items: center;
+  }
+  text-align: center;
+} */
+
+
+/* Responsive Media Queries */
+@media (max-width: 768px) {
+  .mat-elevation-z8 {
+    width: 100%;
+  }
+  .responsive-toolbar{
+    width: 865px;
+  }
+
+  .mat-header-cell,.mat-cell{
+    color:black;
+      background-color:#ffffea;
+  }
+  th.mat-header-cell{
+    padding:13px;
+    background-color:  #A7E6FF;
+  }
+  .filter-wrapper {
+    width: 100%;
+  }
+
+  .filter-container {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px),(max-width:540px),(max-width:631px){
+  .responsive-toolbar{
+    display: flex;
+    flex-direction:row;
+    flex-wrap: wrap;
+    align-items: center;
+    width:853px ;
+  }
+  th.mat-header-cell{
+    padding:13px;
+    color:black;
+  }
+  mat-paginator{
+    width:100%;
+    justify-content: center;
+    display: flex;
+  }
+  
+  .filter-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .filter-wrapper {
+    width: 100%;
+  }
+
+  .main-body {
+    padding: 10px;
+  }
+
+  .mat-header-cell, .mat-cell {
+    font-size: 12px;
+    padding: 8px;
+    color:black;
+    background-color:#ffffea;
+  }
+
+  button[mat-icon-button] {
+    margin: 0;
+    padding: 4px;
+  }
+
+  mat-paginator {
+    font-size: 15px;
+    width:238px;
+  }
+}

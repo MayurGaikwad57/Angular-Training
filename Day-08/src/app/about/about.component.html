@@ -1,0 +1,18 @@
+<div class="container">
+    <h4>The id is:{{user.id}}</h4>
+    <h4>The name is :{{user.name}}</h4>
+</div>
+
+<div>
+    <a [routerLink]="['/About',1,'Mayur']" [queryParams]="{page:2,search:'mayur'}" [fragment]="'load'">Get Mayur
+        details</a>
+</div>
+
+<div>
+    <button (click)="getManojDetails()" class="btn btn-primary">get Manoj Details</button>
+</div>
+
+<div>
+    <a [routerLink]="['/About',3,'Legend']" [queryParams]="{page:2,search:'legend'}" [fragment]="'Loading'">Get Legend
+        Details</a>
+</div>

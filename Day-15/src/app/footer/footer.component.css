@@ -1,0 +1,16 @@
+.heading h5{
+    font-size: 20px;
+}
+.heading ul li{
+    font-size:medium;
+}
+.container{
+    background-color: rgb(240, 204, 204);
+    color:black;
+}
+p{
+    text-align:center;
+    font-size: large;
+    color:rgb(12, 131, 250)
+}
+ 

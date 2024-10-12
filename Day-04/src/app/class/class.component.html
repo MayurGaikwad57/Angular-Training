@@ -1,0 +1,65 @@
+<div class="container">
+    <div class="row">
+        <div [ngClass]="{'col-md-3': !isSubmitted, 'col-md-6': isSubmitted}">
+            <div class="box">
+                Box 1
+            </div>
+        </div>
+        <div [ngClass]="{'col-md-3': !isSubmitted, 'col-md-6': isSubmitted}">
+            <div class="box">
+                Box 2
+            </div>
+        </div>
+        <div [ngClass]="{'col-md-3': !isSubmitted, 'col-md-6': isSubmitted}">
+            <div class="box">
+                Box 3
+            </div>
+        </div>
+        <div [ngClass]="{'col-md-3': !isSubmitted, 'col-md-6': isSubmitted}">
+            <div class="box">
+                Box 4
+            </div>
+        </div>
+    </div>
+    <button (click)="onSubmit()" class="btn btn-primary">Submit</button>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div [ngClass]="getClass()">
+            <div class="box">
+                box1
+            </div>
+            </div>
+            <div [ngClass]="getClass()">
+                <div class="box">
+                    box 1
+                </div>
+                </div>
+                <div [ngClass]="getClass()">
+                    <div class="box">
+                        box3
+                    </div>
+                    </div>
+                    <div [ngClass]="getClass()">
+                        <div class="box">
+                            box4
+                        </div>
+                        </div>
+                    </div>
+                    <button  (click)="complete()" class="btn btn-primary btn-sm">click</button>
+                </div>
+           
+                
+                <div class="container">
+                    <div class="dropdown">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            No of Products
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">1</a></li>
+                            <li><a class="dropdown-item" href="#">2</a></li>
+                            <li><a class="dropdown-item" href="#">3</a></li>
+                        </ul>
+                    </div>
+                </div>

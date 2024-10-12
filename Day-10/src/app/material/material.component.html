@@ -1,0 +1,41 @@
+<div class="container">
+<mat-card>
+    <mat-card-content>
+        <h3>Fill Your details</h3>
+        <form [formGroup]="reactiveForms">
+        <mat-form-field appearance="fill">
+            <mat-label>Enter Name:</mat-label>
+            <input type="text" matInput placeholder="Manoj" formControlName="fname">
+
+        </mat-form-field>
+        <mat-form-field appearance="fill">
+           <mat-label>Email:</mat-label> 
+           <input type="email" matInput placeholder="manoj@google.com" formControlName="email">
+           <mat-error>
+            <span *ngIf="!reactiveForms.get('email')?.valid && reactiveForms.get('email')?.touched">This is not valid email</span>
+           </mat-error>
+        </mat-form-field>
+        <mat-form-field appearance="fill">
+            <mat-label>Country</mat-label>
+            <select matNativeControl formControlName="country">
+             <option value="India">India</option>
+             <option value="Austrilia">Australia</option>
+             <option value="England">England</option>
+             <option value="NewZeland">NewZeland</option>
+            </select>
+        </mat-form-field>
+        <mat-form-field appearance="fill">
+            <mat-label>Message:</mat-label>
+            <textarea matInput placeholder="Message"></textarea>
+        </mat-form-field>
+        <button mat-raised-button color="primary" (click)="onSubmit()" [disabled]="!reactiveForms.valid">Submit</button>
+        </form>
+    </mat-card-content>
+</mat-card>
+</div>
+
+<!-- <div>
+    <button mat-button color="primary">Submit</button>
+    <button mat-button color="accent">Submit</button>
+    <button mat-button color="warn">Submit</button>
+</div> -->

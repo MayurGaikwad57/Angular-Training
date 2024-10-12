@@ -1,0 +1,50 @@
+<div class="container">
+    <h1 style="text-align:center">Contact</h1>
+<div class="form" col-lg-6>
+    <h2 id="registration">Connect With Us</h2>
+    <form [formGroup]="reactiveForm" (ngSubmit)="onSubmit()">
+        <!-- Grouping Reactive form -->
+        <div formGroupName="details">
+        <label for="fname">Name:</label>
+        <input type="text" id="fname" placeholder="Name" formControlName="fname">
+        <div>
+            <span *ngIf="!reactiveForm.get('details.fname')?.valid && reactiveForm.get('details.fname')?.touched">Name is Required</span>
+            <span *ngIf="reactiveForm.get('details.fname')?.hasError('minlength')">
+                At least 3 characters are required.
+              </span>
+        </div>
+        
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" placeholder="mayur@chatgpt.com" formControlName="email">
+        <div>
+            <span *ngIf="!reactiveForm.get('details.email')?.valid && reactiveForm.get('details.email')?.touched">This is not valid email</span>
+        </div>
+         <div>
+        <label for="textbox">Message:</label> <br>
+        <textarea rows="5" cols="50" id="textbox" formControlName="textbox" placeholder="Connect with us"></textarea>
+    </div>
+    </div>
+
+            <label for="country">Country</label>
+            <select id="country" formControlName="country">
+                <option value="India">India</option>
+                <option value="Australia">Australia</option>
+                <option value="NewZeland">NewZeland</option>
+                <option value="England">England</option>
+            </select>
+
+            <div class="d-flex justify-content-center">
+                <button type="submit"  class="btn btn-primary"  [disabled]="reactiveForm.invalid">Submit</button>
+              </div>
+<!-- 
+        <div formArrayName="skills">
+            <ng-container *ngFor="let skill of formSkills.controls;let i = index">
+             <input type="text" placeholder="add a skill.." formControlName="{{i}}">
+            </ng-container>
+            <button (click)="addSkill()">+ Add skill</button>
+        </div> -->
+    </form>
+</div>
+</div>
+

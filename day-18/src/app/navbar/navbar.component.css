@@ -1,0 +1,23 @@
+.hero-section h1{
+    color:rgb(241, 79, 79);
+    font-weight:bolder;
+    font-size: 25px;
+  }
+  a{
+    font-size:x-large;
+  }
+  .hero-section h4{
+    color:aqua;
+}
+.dropdown-item{
+  font-size:14px;
+}
+@media(max-width:526px) {
+   .dropdown-menu{
+      max-width: 90%;
+      white-space: normal;
+   }
+}
+.dropdown-item:hover{
+  background-color: aqua;
+}

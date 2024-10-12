@@ -1,0 +1,11 @@
+<div class="text-center">
+    <p #highlight> Hello How are you</p>
+    <strong #highlight>When we use ViewChild it returns first matching element from the dom and apply chnages to it
+    </strong>
+    <h3 *ngIf="child">Counter {{child.counter}}</h3>
+    <!-- The child Variable is Sometimes null or undefined: If child can actually be null or undefined at certain times, then removing the optional chaining (?.) would cause errors when child is null or undefined -->
+    <!-- Timing Issues: If child is initialized asynchronously or after the view is rendered, trying to access it immediately without optional chaining might cause the code to break. -->
+    <button (click)="inc()">Increment</button>
+    <button (click)="dec()">Decrement</button>
+    <app-counter #viewChild></app-counter>
+</div>

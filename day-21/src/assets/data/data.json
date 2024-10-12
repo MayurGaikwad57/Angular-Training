@@ -1,0 +1,50 @@
+[
+    {
+        "code":  "Mayur",
+        "name":  "Mayur Gaikwad",
+        "email": "gaikwad@chatgpt.com",
+        "phone": "99924636241"
+    },
+    {
+        "code":  "Amit",
+        "name":  "Amit Patil",
+        "email": "patil@google.com",
+        "phone": "99885348234"
+    },
+    {
+        "code":  "Gaurav",
+        "name":  "Gaurav Jha",
+        "email": "Jha@microsoft.com",
+        "phone": "56888326323"
+    },
+    {
+        "code":  "Elvish",
+        "name":  "Elvish Yadav",
+        "email": "yadav@spacex.com",
+        "phone": "56888326323"
+    },
+    {
+        "code":  "Mayur",
+        "name":  "Mayur Gaikwad",
+        "email": "gaikwad@chatgpt.com",
+        "phone": "99924636241"
+    },
+    {
+        "code":  "Amit",
+        "name":  "Amit Patil",
+        "email": "patil@google.com",
+        "phone": "99885348234"
+    },
+    {
+        "code":  "Gaurav",
+        "name":  "Gaurav Jha",
+        "email": "Jha@microsoft.com",
+        "phone": "56888326323"
+    },
+    {
+        "code":  "Elvish",
+        "name":  "Elvish Yadav",
+        "email": "yadav@spacex.com",
+        "phone": "56888326323"
+    }
+]

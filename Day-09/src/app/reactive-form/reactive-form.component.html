@@ -1,0 +1,35 @@
+<div class="container mt-5">
+    <h2 id="registration" class="mb-4">Registration Form</h2>
+    <form [formGroup]="reactiveForm" (ngSubmit)="onSubmit()">
+      <!-- Grouping Reactive form -->
+      <div formGroupName="details" class="mb-3">
+        <div class="mb-3">
+          <label for="fname" class="form-label">Name:</label>
+          <input type="text" id="fname" class="form-control" placeholder="Name" formControlName="fname">
+          <div *ngIf="!reactiveForm.get('details.fname')?.valid && reactiveForm.get('details.fname')?.touched" class="text-danger">
+            Name is required and should not contain spaces.
+          </div>
+        </div>
+        <div class="mb-3">
+          <label for="email" class="form-label">Email:</label>
+          <input type="email" id="email" class="form-control" placeholder="mayur@chatgpt.com" formControlName="email">
+          <div *ngIf="!reactiveForm.get('details.email')?.valid && reactiveForm.get('details.email')?.touched" class="text-danger">
+            Valid email is required.
+          </div>
+        </div>
+      </div>
+  
+      <div class="mb-3">
+        <label for="country" class="form-label">Country</label>
+        <select id="country" class="form-select" formControlName="country">
+          <option value="India">India</option>
+          <option value="Australia">Australia</option>
+          <option value="NewZeland">New Zealand</option>
+          <option value="England">England</option>
+        </select>
+      </div>
+  
+      <button type="submit" class="btn btn-primary" [disabled]="!reactiveForm.valid" id="submit">Submit</button>
+    </form>
+  </div>
+  

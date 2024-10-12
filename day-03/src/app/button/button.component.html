@@ -1,0 +1,27 @@
+<div class="container">
+    <div class="rows">
+        <div class="col-md-6">
+            <h4>Hello Using Structural Directives</h4>
+            <button (click)="toggle()" class="btn btn-primary">
+                Cick here
+            </button>
+            <p *ngIf="showMe">Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore, veritatis?</p>
+        </div>
+
+        <div>
+            <button (click)="showMe2 = !showMe2" class="btn btn-primary">
+                Click Here
+            </button>
+            <div *ngIf="showMe2" class="col-md-12 mt-4">
+
+                <ul>
+                    <li *ngFor="let items of members">{{items}}</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div>
+    <p> Your Salary is {{salary|currency:'Rs'}} </p>
+</div>

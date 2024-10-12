@@ -1,0 +1,30 @@
+.row{
+    display:flex;
+    gap:10px;
+}
+mat-datepicker-toggle{
+    width:50px;
+}
+mat-form-field{
+    width:100%;
+}
+mat-label{
+    gap:5px;
+    /* margin-top:5px; */
+}
+  mat-radio-group{
+    display:flex;
+    gap:5px;
+  }
+  mat-radio-button {
+    margin-right: 15px; /* Adjust spacing between radio buttons */
+  }
+  /* mat-label{
+    margin-top: 10px;
+  } */
+   .action{
+    padding:0px 128px 20px;
+    button{
+        flex:1;
+    }
+   }

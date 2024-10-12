@@ -1,0 +1,13 @@
+.col-lg-6 h5 {
+    color: rgb(69, 108, 124);
+    font-size: x-large;
+    font-style: italic;
+  }
+  
+  .col-lg-6 p {
+    color: rgb(10, 10, 11);
+    font-size: 18px;
+  }
+  .container1{
+    background-color:#b7b3b3;
+  }

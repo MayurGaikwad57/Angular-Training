@@ -1,0 +1,72 @@
+<div class="container">
+    <div class="heading">
+    <h1 style="text-align:center">Contact</h1>
+</div>
+<div class="form" >
+    <h2 id="registration">Connect With Us</h2>
+    <form [formGroup]="reactiveForm" (ngSubmit)="onSubmit()">
+        <!-- Grouping Reactive form -->
+        <div formGroupName="details">
+        <label for="fname">Name:</label>
+        <input type="text" id="fname" placeholder="Name" formControlName="fname">
+        <div>
+            <span *ngIf="reactiveForm.get('details.fname')?.touched && !reactiveForm.get('details.fname')?.valid">
+                <!-- Show 'Name is Required' only if the input is touched and invalid, and it's empty -->
+                <span *ngIf="reactiveForm.get('details.fname')?.hasError('required')">
+                    Name is Required
+                </span>
+                <!-- Show 'Minimum 3 characters are required' if the input is touched, invalid, and has minlength error -->
+                <span *ngIf="reactiveForm.get('details.fname')?.hasError('minlength') && reactiveForm.get('details.fname')?.touched">
+                    At least 3 characters are required.
+                </span>
+            </span>
+        </div>
+        
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" placeholder="mayur@chatgpt.com" formControlName="email">
+        <div>
+            <span *ngIf="!reactiveForm.get('details.email')?.valid && reactiveForm.get('details.email')?.touched">This is not valid email</span>
+        </div>
+         <div>
+        <label for="textbox">Message:</label> <br>
+        <textarea rows="5" cols="50" id="textbox" formControlName="textbox" placeholder="Connect with us"></textarea>
+    </div>
+    </div>
+
+            <label for="country">Country</label>
+            <select id="country" formControlName="country">
+                <option value="India">India</option>
+                <option value="Australia">Australia</option>
+                <option value="NewZeland">NewZeland</option>
+                <option value="England">England</option>
+            </select>
+<!-- 
+             <label for="Gender">Gender:</label>
+            <div class="form-check mx-3 mt-2" >
+                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" formControlName="gender">
+                <label class="form-check-label" for="flexRadioDefault1">
+                  Male
+                </label>
+              </div>
+              <div class="form-check mx-3">
+                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" formControlName="gender">
+                <label class="form-check-label" for="flexRadioDefault2">
+                  Female
+                </label>
+              </div> -->
+
+            <div class="d-flex justify-content-center">
+                <button type="submit"  class="btn btn-primary"  [disabled]="reactiveForm.invalid">Submit</button>
+              </div>
+<!-- 
+        <div formArrayName="skills">
+            <ng-container *ngFor="let skill of formSkills.controls;let i = index">
+             <input type="text" placeholder="add a skill.." formControlName="{{i}}">
+            </ng-container>
+            <button (click)="addSkill()">+ Add skill</button>
+        </div> -->
+    </form>
+</div>
+</div>
+

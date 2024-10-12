@@ -1,0 +1,8 @@
+<div>
+    <h3>The name is {{namedata}}</h3>
+    <h3>The mark is {{markData}}</h3>
+</div>
+<div>
+    <input type="text" #name id="name" class="form-control">
+    <button class="btn btn-primary" (click)="onChange(name.value)">Change</button>
+</div>

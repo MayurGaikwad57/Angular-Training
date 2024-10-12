@@ -1,0 +1,92 @@
+<!-- Navbar using toolbar  -->
+<mat-toolbar class="navbar" color="primary">
+    <div>Code Evolution</div>
+   <div>
+    <span>Home</span>
+    <span>About</span>
+    <span>Contact</span>
+    <span>Services</span>
+   </div>
+ </mat-toolbar>
+
+   <h1>Welcome To Angular Components</h1>
+<button mat-raised-button color="primary" disableRipple>Click here</button>
+<button mat-stroked-button>submit stroked</button>
+<button mat-button>normal</button>
+<button mat-flat-button>submitflat</button>
+
+<div>
+    <button mat-icon-button>click</button>
+    <button mat-fab>click</button>
+    <button mat-mini-fab>click</button>
+    <button mat-fab>Riple</button>
+</div>
+
+<div>
+    <mat-icon color="primary">download</mat-icon>
+</div>
+<div class="container-badge">
+<div>
+    <span matBadge="6">Hello</span>
+</div>
+<div>
+<span matBadgeSize="small" matBadge="5">Hello</span>
+</div>
+<div>
+    <span matBadgeSize="small" matBadge="5" matBadgePosition="below before" >Hello</span>
+    </div>
+    <div>
+        <span matBadgeColor="warn" matBadgeSize="small" matBadge="5" matBadgePosition="below before" >Hello</span>
+        </div>
+        <div>
+            <span matBadgeColor="warn" matBadgeSize="small" matBadge="5" matBadgeOverlap="false" >Hello</span>
+            </div>
+    
+</div>
+
+<!-- Spinner in Angular  -->
+ <div class="spinner">
+    <mat-progress-spinner value="50"></mat-progress-spinner>
+ </div>
+<div>
+ <mat-spinner *ngIf="spinner" color="warn">
+ </mat-spinner>
+ <button mat-raised-button (click)="load()">Click</button>
+</div>
+
+<!-- Side Nav in Material -->
+ <mat-sidenav-container color="warn">
+    <mat-sidenav  #sidenav  mode="side" (opened)="log('Opened')"  (closed)="log('Closed')" [(opened)]="opened" >Side Nav</mat-sidenav>
+    <mat-sidenav-content>Main
+    <button     (click)="Opened()">sideNav</button>
+    <button (click)="sidenav.open()">Open</button>
+    <button (click)="sidenav.close()">Close</button>
+    <button (click)="sidenav.toggle()">Toggle</button>
+</mat-sidenav-content>
+ </mat-sidenav-container>
+
+ <!-- Tabs in Angular Material -->
+  <mat-tab-group #tabref (selectedTabChange)="logChange(tabref.selectedIndex)" color="primary">
+    <mat-tab label="Cricket">Cricket</mat-tab>
+    <mat-tab label="Football">Football</mat-tab>
+    <mat-tab label="Hockey">Hockey </mat-tab>
+  </mat-tab-group>
+  {{tabref.selectedIndex}}
+ 
+  <!-- Stepper --> 
+   <mat-vertical-stepper linear> 
+    <mat-step label="Shipping Address" completed="true"> <p>Shipping Address Details </p></mat-step>
+    <mat-step label="Billing Address" completed="false" optional >
+        <p>Billing Address Details </p>
+        <button mat-button matStepperPrevious>Back</button>
+        <button mat-button matStepperNext>Next</button>
+    
+    </mat-step>
+    <mat-step label="Delivery Address" completed="false"><p>Delivery Address Details </p></mat-step>
+   </mat-vertical-stepper>
+<!-- Tooltip in Angular -->
+ <button mat-raised-button matTooltip="Hello,Nice to see you" matTooltipPosition="after"
+  matTooltipShowDelay="2000"  matTooltipHideDelay="2000"> Submit</button>
+
+  <!-- Dailogue in Angular -->
+   <button mat-raised-button (click)="openDialog()">CLick</button>
