@@ -1,0 +1,18 @@
+<input
+  type="text"
+  [placeholder]="placeholder"
+  [ngClass]="inputClass"
+  [formControl]="internalControl"
+  autocomplete="off"
+  (blur)="onTouched()"
+/>
+
+<ul *ngIf="showSuggestions && filteredSuggestions.length" class="list-group suggestion-dropdown">
+  <li
+    *ngFor="let suggestion of filteredSuggestions"
+    (mousedown)="onSelectSuggestion(suggestion)"
+    class="list-group-item list-group-item-action"
+  >
+    {{ suggestion }}
+  </li>
+</ul>

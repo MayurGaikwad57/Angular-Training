@@ -1,14 +1,19 @@
 <div class="container mt-5">
     <h2 id="registration" class="mb-4">Registration Form</h2>
-    <form [formGroup]="reactiveForm" (ngSubmit)="onSubmit()">
+    <form [formGroup]="reactiveForm">
       <!-- Grouping Reactive form -->
-      <div formGroupName="details" class="mb-3">
+      <div formGroupName="details" class="mb-3" >
         <div class="mb-3">
           <label for="fname" class="form-label">Name:</label>
-          <input type="text" id="fname" class="form-control" placeholder="Name" formControlName="fname">
-          <div *ngIf="!reactiveForm.get('details.fname')?.valid && reactiveForm.get('details.fname')?.touched" class="text-danger">
-            Name is required and should not contain spaces.
-          </div>
+          <app-auto-suggestion
+          [allSuggestions]="allSuggestions"
+          [placeholder]="placeholder"
+          formControlName="fname"
+          [inputClass]="'common-input'"
+          (suggestionSelected)="handleSelection($event)"
+          >
+
+          </app-auto-suggestion>
         </div>
         <div class="mb-3">
           <label for="email" class="form-label">Email:</label>
@@ -29,7 +34,10 @@
         </select>
       </div>
   
-      <button type="submit" class="btn btn-primary" [disabled]="!reactiveForm.valid" id="submit">Submit</button>
+      <button type="submit" class="btn btn-primary" 
+      id="submit" [disabled]="!reactiveForm.valid"
+      (click)="onSubmit()"
+      >Submit</button>
     </form>
   </div>
   
