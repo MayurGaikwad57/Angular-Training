@@ -1,13 +1,41 @@
-<input
-  type="text"
-  [placeholder]="placeholder"
-  [ngClass]="inputClass"
-  [formControl]="internalControl"
-  autocomplete="off"
-  (blur)="onTouched()"
-/>
+<ng-container [ngSwitch]="mode">
 
-<ul *ngIf="showSuggestions && filteredSuggestions.length" class="list-group suggestion-dropdown">
+  <!-- Input -->
+  <input
+    *ngSwitchCase="'text'"
+    type="text"
+    [placeholder]="placeholder"
+    [ngClass]="inputClass"
+    [formControl]="internalControl"
+    autocomplete="off"
+    (blur)="onTouched()"
+  />
+
+  <!-- Select -->
+  <select
+    *ngSwitchCase="'select'"
+    [ngClass]="inputClass"
+    [formControl]="internalControl"
+    (blur)="onTouched()"
+  >
+    <!-- <option *ngFor="let option of selectOptions" [value]="option">
+      {{ option }}
+    </option> -->
+  </select>
+
+  <!-- Textarea -->
+  <textarea
+    *ngSwitchCase="'textarea'"
+    [placeholder]="placeholder"
+    [ngClass]="inputClass"
+    [formControl]="internalControl"
+    (blur)="onTouched()"
+  ></textarea>
+
+</ng-container>
+
+
+<ul *ngIf="showSuggestions && filteredSuggestions.length && mode === 'text' " class="list-group suggestion-dropdown">
   <li
     *ngFor="let suggestion of filteredSuggestions"
     (mousedown)="onSelectSuggestion(suggestion)"

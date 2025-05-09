@@ -20,9 +20,11 @@ import Fuse from 'fuse.js';
   }]
 })
 export class AutoSuggestionComponent implements OnInit, OnChanges, ControlValueAccessor {
+  @Input() mode: 'text' | 'select' | 'textarea' = 'text';
   @Input() inputClass: string = '';
   @Input() allSuggestions: string[] = [];
   @Input() placeholder: string = '';
+  
   @Output() suggestionSelected = new EventEmitter<string>();
 
   internalControl = new FormControl('');

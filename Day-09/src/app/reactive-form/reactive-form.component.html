@@ -6,6 +6,7 @@
         <div class="mb-3">
           <label for="fname" class="form-label">Name:</label>
           <app-auto-suggestion
+          [mode]="'text'"
           [allSuggestions]="allSuggestions"
           [placeholder]="placeholder"
           formControlName="fname"
